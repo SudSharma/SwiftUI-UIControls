@@ -32,11 +32,17 @@ struct SegmentedControlItem: Identifiable {
 struct SegmentedControlView : View {
     
     var body: some View {
-        List(segmentedControlItems) {segmentedControlItem in
-            SegmentedControlRow(segmentedControlItem: segmentedControlItem)
-            }
-            .listStyle(.grouped)
-            .navigationBarTitle(Text("Segmented Control"))
+        Form {
+            Section(header: Text("Images"), content: {
+                SegmentedControlRow(segmentedControlItem: segmentedControlItems[0])
+            })
+            Section(header: Text("Text"), content: {
+                SegmentedControlRow(segmentedControlItem: segmentedControlItems[1])
+            })
+            Section(header: Text("Unicode Text"), content: {
+                SegmentedControlRow(segmentedControlItem: segmentedControlItems[2])
+            })
+        }.navigationBarTitle(Text("Segmented Control"))
     }
 }
 

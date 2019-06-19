@@ -8,16 +8,23 @@
 
 import SwiftUI
 
-var uiControls = [UIControlItem(id: "1", displayName: "Segmented Control"),
-                  UIControlItem(id: "2", displayName: "Toggle")]
+var uiControls = [UIControlItem(id: 1, displayName: "Segmented Control"),
+                  UIControlItem(id: 2, displayName: "Toggle"),
+                  UIControlItem(id: 3, displayName: "Text Field")]
 
 struct UIControlsListView : View {
     
     var body: some View {
         NavigationView {
-            List(uiControls) { uiControl in
+            Form {
                 NavigationButton(destination: SegmentedControlView()) {
-                    Text(uiControl.displayName)
+                    Text(uiControls[0].displayName)
+                }
+                NavigationButton(destination: ToggleView()) {
+                    Text(uiControls[1].displayName)
+                }
+                NavigationButton(destination: TextFieldView()) {
+                    Text(uiControls[2].displayName)
                 }
             }
             .navigationBarTitle(Text("UI Controls"), displayMode: .inline)
@@ -27,7 +34,7 @@ struct UIControlsListView : View {
 
 
 struct UIControlItem: Identifiable {
-    var id: String
+    var id: Int
     var displayName: String
 }
 

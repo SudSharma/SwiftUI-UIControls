@@ -12,12 +12,14 @@ struct ToggleView : View {
     @State var isOn: Bool = false
     
     var body: some View {
-        List {
-            Toggle(isOn: $isOn) {
-                Text(" ")
+        Form {
+            Section {
+                Toggle(isOn: $isOn) {
+                    Text(self.isOn ? "Is ON" : "Is OFF")
+                }
             }
         }
-        .listStyle(.grouped)
+        .navigationBarTitle(Text("Toggle"))
     }
 }
 
