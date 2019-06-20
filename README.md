@@ -15,3 +15,12 @@ SwiftUI-UIControls is a demo of all the different ways to use and customize UICo
 - Plain
 - Rounded Border
 - Secure
+
+## Slider
+## Button
+- Plain
+- Image
+
+## Stepper
+## Date Picker
+## Picker
