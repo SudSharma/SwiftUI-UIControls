@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		9C53B53722B8B80100BD16D4 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53B53622B8B80100BD16D4 /* TextFieldView.swift */; };
+		9C9FA7E422BB0F8D000A955A /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FA7E322BB0F8D000A955A /* SliderView.swift */; };
+		9C9FA7E622BB14AB000A955A /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FA7E522BB14AB000A955A /* PickerView.swift */; };
+		9C9FA7E822BB182E000A955A /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FA7E722BB182E000A955A /* DatePickerView.swift */; };
+		9C9FA7EA22BB40A2000A955A /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FA7E922BB40A2000A955A /* ButtonView.swift */; };
+		9C9FA7EC22BB40B0000A955A /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FA7EB22BB40B0000A955A /* StepperView.swift */; };
 		9CEDFAA322B712D9002C072D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CEDFAA222B712D9002C072D /* Preview Assets.xcassets */; };
 		9CEDFAB122B712D9002C072D /* UIControlsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEDFAB022B712D9002C072D /* UIControlsUITests.swift */; };
 		9CEDFACA22B71745002C072D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEDFAC822B71745002C072D /* SceneDelegate.swift */; };
@@ -31,6 +36,11 @@
 
 /* Begin PBXFileReference section */
 		9C53B53622B8B80100BD16D4 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		9C9FA7E322BB0F8D000A955A /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		9C9FA7E522BB14AB000A955A /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		9C9FA7E722BB182E000A955A /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		9C9FA7E922BB40A2000A955A /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		9C9FA7EB22BB40B0000A955A /* StepperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
 		9CEDFA9622B712D7002C072D /* UIControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CEDFAA222B712D9002C072D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9CEDFAAC22B712D9002C072D /* UIControlsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIControlsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +144,11 @@
 				9CEDFAD622B72C5D002C072D /* SegmentedControlView.swift */,
 				9CEDFAD822B7BC63002C072D /* ToggleView.swift */,
 				9C53B53622B8B80100BD16D4 /* TextFieldView.swift */,
+				9C9FA7E322BB0F8D000A955A /* SliderView.swift */,
+				9C9FA7E522BB14AB000A955A /* PickerView.swift */,
+				9C9FA7E722BB182E000A955A /* DatePickerView.swift */,
+				9C9FA7E922BB40A2000A955A /* ButtonView.swift */,
+				9C9FA7EB22BB40B0000A955A /* StepperView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,11 +265,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CEDFAD522B7180C002C072D /* UIControlsListView.swift in Sources */,
+				9C9FA7EC22BB40B0000A955A /* StepperView.swift in Sources */,
 				9CEDFAD722B72C5D002C072D /* SegmentedControlView.swift in Sources */,
+				9C9FA7EA22BB40A2000A955A /* ButtonView.swift in Sources */,
 				9C53B53722B8B80100BD16D4 /* TextFieldView.swift in Sources */,
+				9C9FA7E822BB182E000A955A /* DatePickerView.swift in Sources */,
 				9CEDFACB22B71745002C072D /* AppDelegate.swift in Sources */,
+				9C9FA7E622BB14AB000A955A /* PickerView.swift in Sources */,
 				9CEDFAD922B7BC63002C072D /* ToggleView.swift in Sources */,
 				9CEDFACA22B71745002C072D /* SceneDelegate.swift in Sources */,
+				9C9FA7E422BB0F8D000A955A /* SliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

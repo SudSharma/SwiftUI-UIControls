@@ -10,7 +10,12 @@ import SwiftUI
 
 var uiControls = [UIControlItem(id: 1, displayName: "Segmented Control"),
                   UIControlItem(id: 2, displayName: "Toggle"),
-                  UIControlItem(id: 3, displayName: "Text Field")]
+                  UIControlItem(id: 3, displayName: "Text Field"),
+                  UIControlItem(id: 4, displayName: "Slider"),
+                  UIControlItem(id: 5, displayName: "Picker"),
+                  UIControlItem(id: 6, displayName: "Date Picker"),
+                  UIControlItem(id: 7, displayName: "Button"),
+                  UIControlItem(id: 8, displayName: "Stepper")]
 
 struct UIControlsListView : View {
     
@@ -25,6 +30,21 @@ struct UIControlsListView : View {
                 }
                 NavigationButton(destination: TextFieldView()) {
                     Text(uiControls[2].displayName)
+                }
+                NavigationButton(destination: SliderView()) {
+                    Text(uiControls[3].displayName)
+                }
+                NavigationButton(destination: PickerView()) {
+                    Text(uiControls[4].displayName)
+                }
+                NavigationButton(destination: DatePickerView()) {
+                    Text(uiControls[5].displayName)
+                }
+                NavigationButton(destination: ButtonView()) {
+                    Text(uiControls[6].displayName)
+                }
+                NavigationButton(destination: StepperView()) {
+                    Text(uiControls[7].displayName)
                 }
             }
             .navigationBarTitle(Text("UI Controls"), displayMode: .inline)
