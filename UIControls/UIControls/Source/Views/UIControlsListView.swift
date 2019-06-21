@@ -16,7 +16,8 @@ var uiControls = [UIControlItem(id: 1, displayName: "Segmented Control"),
                   UIControlItem(id: 6, displayName: "Date Picker"),
                   UIControlItem(id: 7, displayName: "Button"),
                   UIControlItem(id: 8, displayName: "Stepper"),
-                  UIControlItem(id: 9, displayName: "Multiline Text")]
+                  UIControlItem(id: 9, displayName: "Multiline Text"),
+                  UIControlItem(id: 9, displayName: "Alert")]
 
 struct UIControlsListView : View {
     
@@ -49,6 +50,9 @@ struct UIControlsListView : View {
                 }
                 NavigationButton(destination: MultilineTextView()) {
                     Text(uiControls[8].displayName)
+                }
+                NavigationButton(destination: AlertView()) {
+                    Text(uiControls[9].displayName)
                 }
             }
             .navigationBarTitle(Text("UI Controls"), displayMode: .inline)

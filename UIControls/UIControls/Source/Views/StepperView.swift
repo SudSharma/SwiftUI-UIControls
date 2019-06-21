@@ -25,7 +25,6 @@ struct StepperView : View {
         }
         .navigationBarTitle(Text("Stepper"))
     }
-    
 }
 
 #if DEBUG
