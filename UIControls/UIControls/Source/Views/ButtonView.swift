@@ -9,64 +9,109 @@
 import SwiftUI
 
 struct ButtonView : View {
-    @State var selectedHeart = "❤️"
     
     var body: some View {
         VStack {
-            HStack {
-                Text("Pick a heart").padding(.leading)
-                Spacer()
-                Text(selectedHeart)
-                Spacer()
-                
-                Button(action: {
-                    self.selectedHeart = "❤️"
-                }, label: {
-                    Text("❤️")
-                })
-                
-                Button(action: {
-                    self.selectedHeart = "💙"
-                }, label: {
-                    Text("💙")
-                })
-                
-                Button(action: {
-                    self.selectedHeart = "💚"
-                }, label: {
-                    Text("💚")
-                })
-                    .padding(.trailing)
-            }
-            .padding([.top, .bottom])
+            UnicodeTextButtonView()
             Divider()
-            HStack {
-                Text("Plain Button").padding(.leading)
-                Spacer()
-                Button(action: {
-                    
-                }, label: {
-                    Text("Tap Me")
-                })
-                .padding(.trailing)
-            }
-            .padding([.top, .bottom])
+            PlainButtonView()
             Divider()
-            HStack {
-                Text("Image Button").padding(.leading)
-                Spacer()
-                Button(action: {
-                    
-                }, label: {
-                    Image("Car")
-                })
-                .padding(.trailing)
-            }
-            .padding([.top, .bottom])
-            
+            ImageButtonView()
+            Divider()
+            ImageAndTextButtonView()
             Spacer()
         }
         .navigationBarTitle(Text("Button"))
+    }
+}
+
+struct UnicodeTextButtonView: View {
+    @State var selectedHeart = "❤️"
+    
+    var body: some View {
+        HStack {
+            Text("Pick a heart").padding(.leading)
+            Spacer()
+            Text(selectedHeart)
+            Spacer()
+            
+            Button(action: {
+                self.selectedHeart = "❤️"
+            }, label: {
+                Text("❤️")
+            })
+            
+            Button(action: {
+                self.selectedHeart = "💙"
+            }, label: {
+                Text("💙")
+            })
+            
+            Button(action: {
+                self.selectedHeart = "💚"
+            }, label: {
+                Text("💚")
+            })
+            .padding(.trailing)
+        }
+        .padding([.top, .bottom])
+    }
+}
+
+struct PlainButtonView: View {
+    var body: some View {
+        HStack {
+            Text("Plain Button").padding(.leading)
+            Spacer()
+            Button(action: {
+                
+            }, label: {
+                Text("Tap Me")
+            })
+            .padding(.trailing)
+        }
+        .padding([.top, .bottom])
+    }
+}
+
+struct ImageButtonView: View {
+    var body: some View {
+        HStack {
+            Text("Image Button").padding(.leading)
+            Spacer()
+            Button(action: {
+                
+            }, label: {
+                Image("Car").renderingMode(.template).foregroundColor(Color.white)
+            })
+            .padding()
+            .background(Color.blue)
+            .cornerRadius(30.0)
+            .padding()
+        }
+        .padding([.top, .bottom])
+    }
+}
+
+struct ImageAndTextButtonView: View {
+    var body: some View {
+        HStack {
+            Text("Text and Image Button").padding(.leading)
+            Spacer()
+            Button(action: {
+                
+            }, label: {
+                VStack {
+                    Image("Car").renderingMode(.template).foregroundColor(Color.white)
+                    Text("Car").color(.white)
+                }
+            })
+            .padding()
+            .background(Color.blue)
+            .cornerRadius(10.0)
+            .padding()
+        }
+        .padding([.top, .bottom])
     }
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C53B53722B8B80100BD16D4 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C53B53622B8B80100BD16D4 /* TextFieldView.swift */; };
+		9C78562D22BC735400FFC87F /* MultilineTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C78562C22BC735400FFC87F /* MultilineTextView.swift */; };
 		9C9FA7E422BB0F8D000A955A /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FA7E322BB0F8D000A955A /* SliderView.swift */; };
 		9C9FA7E622BB14AB000A955A /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FA7E522BB14AB000A955A /* PickerView.swift */; };
 		9C9FA7E822BB182E000A955A /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C9FA7E722BB182E000A955A /* DatePickerView.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		9C53B53622B8B80100BD16D4 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		9C78562C22BC735400FFC87F /* MultilineTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultilineTextView.swift; sourceTree = "<group>"; };
 		9C9FA7E322BB0F8D000A955A /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		9C9FA7E522BB14AB000A955A /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 		9C9FA7E722BB182E000A955A /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				9CEDFAD622B72C5D002C072D /* SegmentedControlView.swift */,
 				9CEDFAD822B7BC63002C072D /* ToggleView.swift */,
 				9C53B53622B8B80100BD16D4 /* TextFieldView.swift */,
+				9C78562C22BC735400FFC87F /* MultilineTextView.swift */,
 				9C9FA7E322BB0F8D000A955A /* SliderView.swift */,
 				9C9FA7E522BB14AB000A955A /* PickerView.swift */,
 				9C9FA7E722BB182E000A955A /* DatePickerView.swift */,
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CEDFAD522B7180C002C072D /* UIControlsListView.swift in Sources */,
+				9C78562D22BC735400FFC87F /* MultilineTextView.swift in Sources */,
 				9C9FA7EC22BB40B0000A955A /* StepperView.swift in Sources */,
 				9CEDFAD722B72C5D002C072D /* SegmentedControlView.swift in Sources */,
 				9C9FA7EA22BB40A2000A955A /* ButtonView.swift in Sources */,

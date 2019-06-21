@@ -8,19 +8,42 @@
 
 import SwiftUI
 
+enum Country: String, CaseIterable, Hashable {
+    case none
+    case china
+    case india
+    case uk
+    case us
+}
+
 struct PickerView : View {
-    @State var selectedValue: String = ""
+    @State var selectedValue = Country.none
     
     var body: some View {
-        Form {
-            Section {
-                Picker(selection: $selectedValue, label: Text("Select a country")) {
-                    Text("China")
-                    Text("India")
-                    Text("UK")
-                    Text("US")
+        VStack {
+            Text(selectedValue.rawValue)
+            Divider()
+            Picker(selection: $selectedValue, label: Text("Select a country")) {
+                ForEach(Country.allCases.identified(by: \.self)) { country in
+                    HStack {
+                        Spacer()
+                        Text(country.rawValue).tag(country)
+                        Spacer()
+                    }
                 }
-                .pickerStyle(.default)
+            }
+            Form {
+                Section {
+                    Picker(selection: $selectedValue, label: Text("Select a country")) {
+                        ForEach(Country.allCases.identified(by: \.self)) { country in
+                            HStack {
+                                Spacer()
+                                Text(country.rawValue).tag(country)
+                                Spacer()
+                            }
+                        }
+                    }
+                }
             }
         }
         .navigationBarTitle(Text("Picker"))
