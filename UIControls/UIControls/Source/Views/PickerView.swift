@@ -21,7 +21,7 @@ struct PickerView : View {
     
     var body: some View {
         VStack {
-            Text(selectedValue.rawValue)
+            Text(selectedValue.rawValue).padding(.top)
             Divider()
             Picker(selection: $selectedValue, label: Text("Select a country")) {
                 ForEach(Country.allCases.identified(by: \.self)) { country in
@@ -36,11 +36,7 @@ struct PickerView : View {
                 Section {
                     Picker(selection: $selectedValue, label: Text("Select a country")) {
                         ForEach(Country.allCases.identified(by: \.self)) { country in
-                            HStack {
-                                Spacer()
-                                Text(country.rawValue).tag(country)
-                                Spacer()
-                            }
+                            Text(country.rawValue).tag(country)
                         }
                     }
                 }
