@@ -12,27 +12,18 @@ struct AlertView : View {
     @State var actionSheet: ActionSheet?
     
     var body: some View {
-        VStack {
-//            Button(action: {
-//                let alert = Alert(title: Text("Showing Alert"),
-//                                  message: Text("Message"),
-//                                  primaryButton: Alert.Button.default(Text("OK")),
-//                                  secondaryButton: Alert.Button.destructive(Text("Remove")))
-//            }) {
-//                Text("Show Alert")
-//            }
-            
-            Button(action: {
+        Button(action: {
+            if self.actionSheet == nil {
                 self.actionSheet = ActionSheet(title: Text("Showing ActionSheet"),
-                                              message: Text("Message"),
-                                              buttons: [Alert.Button.default(Text("OK")),
-                                                        Alert.Button.cancel(),
-                                                        Alert.Button.destructive(Text("Delete"))])
-            }) {
-                Text("Show ActionSheet")
+                                               message: Text("Message"),
+                                               buttons: [Alert.Button.default(Text("OK")),
+                                                         Alert.Button.cancel(),
+                                                         Alert.Button.destructive(Text("Delete"))])
             }
-            .presentation(actionSheet)
+        }) {
+            Text("Show ActionSheet")
         }
+        .presentation(actionSheet)
     }
 }
 
