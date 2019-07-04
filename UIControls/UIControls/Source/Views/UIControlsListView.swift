@@ -17,41 +17,41 @@ var uiControls = [UIControlItem(id: 1, displayName: "Segmented Control"),
                   UIControlItem(id: 7, displayName: "Button"),
                   UIControlItem(id: 8, displayName: "Stepper"),
                   UIControlItem(id: 9, displayName: "Multiline Text"),
-                  UIControlItem(id: 9, displayName: "Alert")]
+                  UIControlItem(id: 9, displayName: "Alert and Action Sheet")]
 
 struct UIControlsListView : View {
     
     var body: some View {
         NavigationView {
             Form {
-                NavigationButton(destination: SegmentedControlView()) {
+                NavigationLink(destination: SegmentedControlView()) {
                     Text(uiControls[0].displayName)
                 }
-                NavigationButton(destination: ToggleView()) {
+                NavigationLink(destination: ToggleView()) {
                     Text(uiControls[1].displayName)
                 }
-                NavigationButton(destination: TextFieldView()) {
+                NavigationLink(destination: TextFieldView()) {
                     Text(uiControls[2].displayName)
                 }
-                NavigationButton(destination: SliderView()) {
+                NavigationLink(destination: SliderView()) {
                     Text(uiControls[3].displayName)
                 }
-                NavigationButton(destination: PickerView()) {
+                NavigationLink(destination: PickerView()) {
                     Text(uiControls[4].displayName)
                 }
-                NavigationButton(destination: DatePickerView()) {
+                NavigationLink(destination: DatePickerView()) {
                     Text(uiControls[5].displayName)
                 }
-                NavigationButton(destination: ButtonView()) {
+                NavigationLink(destination: ButtonView()) {
                     Text(uiControls[6].displayName)
                 }
-                NavigationButton(destination: StepperView()) {
+                NavigationLink(destination: StepperView()) {
                     Text(uiControls[7].displayName)
                 }
-                NavigationButton(destination: MultilineTextView()) {
+                NavigationLink(destination: MultilineTextView()) {
                     Text(uiControls[8].displayName)
                 }
-                NavigationButton(destination: AlertView()) {
+                NavigationLink(destination: AlertView()) {
                     Text(uiControls[9].displayName)
                 }
             }

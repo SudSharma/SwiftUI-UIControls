@@ -9,21 +9,40 @@
 import SwiftUI
 
 struct AlertView : View {
-    @State var actionSheet: ActionSheet?
+    @State var showActionSheet: Bool = false
+    @State var showAlert: Bool = false
     
     var body: some View {
-        Button(action: {
-            if self.actionSheet == nil {
-                self.actionSheet = ActionSheet(title: Text("Showing ActionSheet"),
-                                               message: Text("Message"),
-                                               buttons: [Alert.Button.default(Text("OK")),
-                                                         Alert.Button.cancel(),
-                                                         Alert.Button.destructive(Text("Delete"))])
+        Form {
+            Section {
+                Button(action: {
+                    self.showActionSheet.toggle()
+                }) {
+                    return Text("Show ActionSheet")
+                }
+                .presentation($showActionSheet) {
+                    return ActionSheet(title: Text("Showing ActionSheet"),
+                                       message: Text("Message"),
+                                       buttons: [Alert.Button.default(Text("OK")),
+                                                 Alert.Button.cancel(),
+                                                 Alert.Button.destructive(Text("Delete"))])
+                }
             }
-        }) {
-            Text("Show ActionSheet")
+            Section {
+                Button(action: {
+                    self.showAlert.toggle()
+                }) {
+                    return Text("Show Alert")
+                }
+                .presentation($showAlert) {
+                    return Alert(title: Text("Showing Alert"),
+                                 message: Text("Message"),
+                                 primaryButton: Alert.Button.default(Text("OK")),
+                                 secondaryButton: Alert.Button.cancel())
+                }
+            }
         }
-        .presentation(actionSheet)
+        .navigationBarTitle(Text("Alert and Action Sheet"))
     }
 }
 
