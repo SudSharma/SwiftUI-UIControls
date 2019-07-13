@@ -20,28 +20,28 @@ struct TextFieldView : View {
                 HStack {
                     Text("Plain Text")
                     Divider()
-                    TextField($plainText, placeholder: Text("Optional"))
+                    TextField("Optional", text: $plainText)
                 }
             }
             Section {
                 HStack {
                     Text("Round Border")
                     Divider()
-                    TextField($roundBorderText, placeholder: Text("Optional")).textFieldStyle(.roundedBorder)
+                    TextField("Optional", text: $roundBorderText).textFieldStyle(.roundedBorder)
                 }
             }
             Section {
                 HStack {
                     Text("Right Aligned")
                     Divider()
-                    TextField($rightAlignedText, placeholder: Text("Optional")).multilineTextAlignment(.trailing)
+                    TextField("Optional", text: $rightAlignedText).multilineTextAlignment(.trailing)
                 }
             }
             Section {
                 HStack {
                     Text("Secure Text")
                     Divider()
-                    SecureField($secureText, placeholder: Text("Optional"))
+                    SecureField("Optional", text: $secureText)
                 }
             }
         }
