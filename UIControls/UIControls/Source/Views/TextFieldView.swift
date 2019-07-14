@@ -46,6 +46,7 @@ struct TextFieldView : View {
             }
         }
         .navigationBarTitle(Text("Text Field"))
+        
     }
 }
 
