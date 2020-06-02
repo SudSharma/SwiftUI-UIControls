@@ -9,25 +9,36 @@
 import SwiftUI
 
 struct TextFieldView : View {
-    @State var plainText: String = ""
-    @State var roundBorderText: String = ""
-    @State var rightAlignedText: String = ""
-    @State var secureText: String = ""
+    @State var defaultText = ""
+    @State var plainText = ""
+    @State var roundBorderText = ""
+    @State var rightAlignedText = ""
+    @State var secureText = ""
     
     var body: some View {
         Form {
             Section {
                 HStack {
-                    Text("Plain Text")
+                    Text("Plain Text Style")
                     Divider()
                     TextField("Optional", text: $plainText)
+                        .textFieldStyle(PlainTextFieldStyle())
+                }
+            }
+            Section {
+                HStack {
+                    Text("Default Text Style")
+                    Divider()
+                    TextField("Optional", text: $defaultText)
+                        .textFieldStyle(DefaultTextFieldStyle())
                 }
             }
             Section {
                 HStack {
                     Text("Round Border")
                     Divider()
-                    TextField("Optional", text: $roundBorderText).textFieldStyle(.roundedBorder)
+                    TextField("Optional", text: $roundBorderText)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
             }
             Section {

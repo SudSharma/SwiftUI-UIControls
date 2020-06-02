@@ -9,23 +9,23 @@
 import SwiftUI
 
 struct AlertView : View {
-    @State var showActionSheet: Bool = false
-    @State var showAlert: Bool = false
+    @State var showActionSheet = false
+    @State var showAlert = false
     
     var body: some View {
-        Form {
+        List {
             Section {
                 Button(action: {
                     self.showActionSheet.toggle()
                 }) {
-                    return Text("Show ActionSheet")
+                    Text("Show ActionSheet")
                 }
-                .presentation($showActionSheet) {
-                    return ActionSheet(title: Text("Showing ActionSheet"),
-                                       message: Text("Message"),
-                                       buttons: [Alert.Button.default(Text("OK")),
-                                                 Alert.Button.cancel(),
-                                                 Alert.Button.destructive(Text("Delete"))])
+                .actionSheet(isPresented:  $showActionSheet) {
+                    ActionSheet(title: Text("Showing ActionSheet"),
+                                message: Text("Message"),
+                                buttons: [Alert.Button.default(Text("OK")),
+                                          Alert.Button.cancel(),
+                                          Alert.Button.destructive(Text("Delete"))])
                 }
             }
             Section {
@@ -34,11 +34,11 @@ struct AlertView : View {
                 }) {
                     return Text("Show Alert")
                 }
-                .presentation($showAlert) {
-                    return Alert(title: Text("Showing Alert"),
-                                 message: Text("Message"),
-                                 primaryButton: Alert.Button.default(Text("OK")),
-                                 secondaryButton: Alert.Button.cancel())
+                .alert(isPresented: $showAlert) {
+                    Alert(title: Text("Showing Alert"),
+                          message: Text("Message"),
+                          primaryButton: Alert.Button.default(Text("OK")),
+                          secondaryButton: Alert.Button.cancel())
                 }
             }
         }

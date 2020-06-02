@@ -103,7 +103,7 @@ struct ImageAndTextButtonView: View {
             }, label: {
                 VStack {
                     Image("Car").renderingMode(.template).foregroundColor(Color.white)
-                    Text("Car").color(.white)
+                    Text("Car").foregroundColor(.white)
                 }
             })
             .padding()

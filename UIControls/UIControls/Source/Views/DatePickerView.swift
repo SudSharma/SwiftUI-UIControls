@@ -9,16 +9,25 @@
 import SwiftUI
 
 struct DatePickerView : View {
-    @State var selectedDate: Date = Date()
-    @State var selectedDate1: Date = Date()
+    @State var selectedDate = Date()
+    @State var selectedDate1 = Date()
     
     var body: some View {
-        Form {
+        List {
             Section {
-                DatePicker($selectedDate)
+                DatePicker(selection: $selectedDate, displayedComponents: [.hourAndMinute]) {
+                    Text("Selected Date - \(selectedDate)")
+                }
             }
             Section {
-                DatePicker($selectedDate1, displayedComponents: [.date]).datePickerStyle(.default)
+                DatePicker(selection: $selectedDate, displayedComponents: [.date]) {
+                    Text("Selected Date - \(selectedDate)")
+                }
+            }
+            Section {
+                DatePicker(selection: $selectedDate, displayedComponents: [.date, .hourAndMinute]) {
+                    Text("Selected Date - \(selectedDate)")
+                }
             }
         }
         .navigationBarTitle(Text("Date Picker"))

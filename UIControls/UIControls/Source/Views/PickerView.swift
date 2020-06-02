@@ -21,10 +21,10 @@ struct PickerView : View {
     
     var body: some View {
         VStack {
-            Text(selectedValue.rawValue).padding(.top)
+            Text("Selected country - \(selectedValue.rawValue)").padding(.top)
             Divider()
-            Picker(selection: $selectedValue, label: Text("Select a country")) {
-                ForEach(Country.allCases.identified(by: \.self)) { country in
+            Picker(selection: $selectedValue, label: Text("")) {
+                ForEach(Country.allCases, id: \.self) { country in
                     HStack {
                         Spacer()
                         Text(country.rawValue).tag(country)
@@ -32,10 +32,10 @@ struct PickerView : View {
                     }
                 }
             }
-            Form {
+            List {
                 Section {
                     Picker(selection: $selectedValue, label: Text("Select a country")) {
-                        ForEach(Country.allCases.identified(by: \.self)) { country in
+                        ForEach(Country.allCases, id: \.self) { country in
                             Text(country.rawValue).tag(country)
                         }
                     }

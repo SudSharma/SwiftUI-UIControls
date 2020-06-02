@@ -48,10 +48,10 @@ struct SegmentedControlView : View {
 
 struct SegmentedControlRow : View {
     var segmentedControlItem: SegmentedControlItem
-    @State var selectedSegment: Int = 0
+    @State var selectedSegment = 0
     
     var body: some View {
-        return SegmentedControl(selection: $selectedSegment) {
+        Picker("", selection: $selectedSegment) {
             ForEach(0..<segmentedControlItem.displayNames.count) { index in
                 if self.segmentedControlItem.displayType == .image {
                     Image(self.segmentedControlItem.displayNames[index]).tag(index)
@@ -61,6 +61,7 @@ struct SegmentedControlRow : View {
                 }
             }
         }
+        .pickerStyle(SegmentedPickerStyle())
     }
 }
 
