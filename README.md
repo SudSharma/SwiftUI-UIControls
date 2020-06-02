@@ -1,6 +1,6 @@
 # SwiftUI - UIControls
 
-[![Build Status](http://24.7.16.155:3280/buildStatus/icon?job=Build-SwiftUI-UIControls)](http://24.7.16.155:3280/job/Build-SwiftUI-UIControls/)
+[![Build Status](http://24.7.16.155:3280/buildStatus/icon?job=Build-SwiftUIControls)](http://24.7.16.155:3280/job/Build-SwiftUIControls/)
 
 ### Contents
 SwiftUI-UIControls is a demo of all the different ways to use and customize UIControls in SwiftUI.
